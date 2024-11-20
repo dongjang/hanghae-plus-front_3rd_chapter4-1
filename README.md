@@ -10,7 +10,7 @@
 6. [주요 개념](#주요-개념)
 7. [CDN을 이용한 최적화 보고서](#cdn을-이용한-최적화-보고서)
 
-### 소개
+## 소개
 
 ![alt text](pipeline.png)
 
@@ -24,7 +24,7 @@
 8. Route 53 DNS 서비스 구축
 9. 사용자에게 오픈.
 
-### 파이프라인 구축 효과
+## 파이프라인 구축 효과
 
 - 자동화 : GitHub Actions는 빌드 및 배포 프로세스를 자동화.
 - 확장성 : S3 및 CloudFront를 이용하여 트래픽 증가 시 별도의 수고 없이 자동으로 트래픽을 확장 가능.
@@ -32,7 +32,7 @@
 - 보안 : IAM은 세분화된 액세스 제어를 제공하여 승인된 사용자만 AWS 리소스와 상호 작용할 수 있도록 도와 주어 강력한 보안 제공.
 - 투명성 : GitHub Actions, S3 및 CloudFront는 배포 프로세스에 대한 명확한 가시성을 제공하여 협업이 더욱 투명.
 
-### 사전 준비
+## 사전 준비
 
 - 링크를 클릭해서 설치 페이지로 이동
 
@@ -40,7 +40,7 @@
 2. [Node.js 설치 (18 이상)](https://nodejs.org/en)
 3. [AWS 계정 생성](https://aws.amazon.com/s3/)
 
-### 세팅 절차
+## 세팅 절차
 
 1. Next.js 설치
 
@@ -68,12 +68,12 @@
 
 9. 세팅된 도메인 접속 확인 -> 실패 시 8번 세팅 다시 확인
 
-### 주요 링크
+## 주요 링크
 
 - S3 버킷 웹사이트 엔드포인트 : http://jdj-aws-bucket.s3-website-ap-southeast-2.amazonaws.com/
 - CloudFrount 배포 도메인 이름 : https://d2hnnj815xakwr.cloudfront.net
 
-### 주요 개념
+## 주요 개념
 
 - GitHub Actions과 CI/CD 도구
   ##### GitHub Actons
@@ -147,6 +147,6 @@
 
   - 환경 변수는 일반적으로 빌드 또는 배포 중에 액세스할 수 있는 구성 설정을 저장하는 데 사용된다.
 
-### CDN을 이용한 최적화 보고서
+## CDN을 이용한 최적화 보고서
 
 - [CDN을 이용한 최적화 보고서](./cdn-comparison-report.md)
