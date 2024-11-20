@@ -5,7 +5,7 @@
 1. [소개](#소개)
 2. [파이프라인 구축 효과](#파이프라인-구축-효과)
 3. [사전 준비](#사전-준비)
-4. [세팅 절차](#세팅-절차)
+4. [세팅](#세팅-절차)
 5. [주요 링크](#주요-링크)
 6. [주요 개념](#주요-개념)
 7. [CDN을 이용한 최적화 비교 보고서](#cdn을-이용한-최적화-비교-보고서)
@@ -14,14 +14,9 @@
 
 ![alt text](pipeline.png)
 
-1. 저장소를 체크아웃.
-2. Node.js 18.x 버전을 설정.
-3. 프로젝트 의존성을 설치.
-4. Next.js 프로젝트를 빌드.
-5. AWS 자격 증명을 구성.
-6. 빌드된 파일을 S3 버킷에 동기화.
-7. CloudFront 캐시를 무효화.
-8. Route 53을 통해 DNS 서비스 구축 후 사용자에게 오픈.
+- Next.js(React)와 node.js를 기반으로 프로젝트를 구축.
+- Github Actions를 통해 배포 자동화.
+- 아마존의 Cloud 서비스인 S3, Cloudfront, Route 53을 이용하여 인프라 구축.
 
 ### 파이프라인 구축 효과
 
@@ -36,7 +31,7 @@
 - 링크를 클릭해서 설치 페이지로 이동
 
 1. [Visual Studio Code 설치](https://code.visualstudio.com/)
-2. [Node.js 설치 (18 이상)](https://nodejs.org/en)
+2. [Node.js 설치 (20 이상)](https://nodejs.org/en)
 3. [AWS 계정 생성](https://aws.amazon.com/s3/)
 
 ### 세팅 절차
@@ -148,4 +143,4 @@
 
 ### CDN을 이용한 최적화 비교 보고서
 
-- [CDN을 이용한 최적화 비교 보고서](./cdn-comparison-report.md)
+[CDN을 이용한 최적화 비교 보고서](path/to/another-file.md)
