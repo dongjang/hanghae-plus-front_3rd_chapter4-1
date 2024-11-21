@@ -12,7 +12,7 @@
 
 ## 소개
 
-![alt text](pipeline.png)
+![alt text](./src/app/img/pipeline.png)
 
 1. 저장소를 체크아웃.
 2. Node.js 18.x 버전을 설정.
