@@ -2,12 +2,11 @@
 
 ## 목차
 
-- [목차](#목차)
-  - [CDN 최적화를 진행한 이유](#cdn-최적화를-진행한-이유)
-  - [테스트 환경](#테스트-환경)
-  - [테스트](#테스트)
-  - [S3와 CDN 성능 비교](#s3와-cdn-성능-비교)
-  - [결론](#결론)
+- [CDN 최적화를 진행한 이유](#cdn-최적화를-진행한-이유)
+- [테스트 환경](#테스트-환경)
+- [테스트](#테스트)
+- [S3와 CDN 성능 비교](#s3와-cdn-성능-비교)
+- [결론](#결론)
 
 ## CDN 최적화를 진행한 이유
 
@@ -42,19 +41,23 @@
 
 #### bucket과 Cloudfront
 
-- S3 : bucket.s3 노출
+- S3 : S3에서 사용되는 bucket으로 bucket.s3 노출
 
   - ![alt text](<./src/app/img/S3 bucket.png>)
 
-- CDN : Cloudfront의 서비스이기 때문에 Cloudfront가 노출
+- CDN : CDN이 Cloudfront의 서비스이기 때문에 Cloudfront가 노출
 
   - ![alt text](<./src/app/img/CDN Cloudfront.png>)
 
-##### 네트워크만으로도 헤더의 X-Cache와 네트워크에서 조회되는 이름만으로도 어떤 것으로 배포되는지 확인 가능
+##### 헤더의 X-Cache와 네트워크에서 조회되는 이름만으로도 어떤 것으로 배포되는지 확인 가능
 
 ## S3와 CDN 성능 비교
 
-![alt text](<./src/app/img/S3 네트워크.png>)
+- S3 네트워크
+  ![alt text](<./src/app/img/S3 네트워크.png>)
+
+- CDN 네트워크
+
 ![alt text](<./src/app/img/CDN 네트워크.png>)
 
 | 대상 | 성능 (속도) |
