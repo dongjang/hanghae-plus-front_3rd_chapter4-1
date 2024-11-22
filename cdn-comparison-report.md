@@ -24,6 +24,7 @@
 ### 테스트 방법
 
 - 크롬 브라우저 개발자 도구 네트워크 속도 측정
+- Lighthouse 페이지 로드 분석
 
 ## 테스트
 
@@ -53,6 +54,8 @@
 
 ## S3와 CDN 성능 비교
 
+### 네트워크
+
 - S3 네트워크
 
 ![alt text](<./src/app/img/S3 네트워크.png>)
@@ -71,6 +74,28 @@
 | S3        | 572 KB        | 1.85초           | 0.719초          | 1.63초      |
 | CDN       | 290 KB        | 0.705초          | 0.246초          | 0.662초     |
 | 개선율(%) | 49.30         | 61.89            | 65.78            | 59.38       |
+
+### Lighthouse
+
+- S3 Lighthouse
+
+![alt text](./src/app/img/S3_LightHouse.png)
+
+- CDN Lighthouse
+
+![alt text](./src/app/img/CDN_LightHouse.png)
+
+- First Contentful Paint : 첫 번째 콘텐츠(텍스트, 이미지 등)가 사용자에게 표시되는 시간
+- Largest Contentful Paint : 가장 큰 콘텐츠(예: 이미지, 텍스트 블록 등)가 화면에 표시되는 시간.
+- Total Blocking Time : 페이지 로드 중에 사용자가 상호작용할 수 없는 시간. 즉, 메인 스레드가 차단되어 사용자가 클릭하거나 스크롤할 수 없는 시간의 총합.
+- Cumulative Layout Shift : 페이지 로드 중에 예상치 못한 레이아웃 변화의 총합을 측정.
+- Speed Index : 화면에 콘텐츠가 표시되는 속도.
+
+|           | First Contentful Paint | Largest Contentful Paint | Total Blocking Time | Cumulative Layout Shift | Speed Index |
+| --------- | ---------------------- | ------------------------ | ------------------- | ----------------------- | ----------- |
+| S3        | 0.8초                  | 4.5초                    | 0.55초              | 0                       | 12.1초      |
+| CDN       | 0.8초                  | 2.4초                    | 0.24초              | 0                       | 2초         |
+| 개선율(%) | 0                      | 46.67                    | 56.36               | 0                       | 83.47       |
 
 ## 결론
 
